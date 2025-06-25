@@ -7,16 +7,11 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "./components/components/ui/select";
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from "./components/components/ui/card";
+} from "@/components/ui/select";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowLeftRight, Loader2 } from "lucide-react";
-import { Button } from "./components/components/ui/button";
-import { Input } from "./components/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 
 const API_KEY = import.meta.env.VITE_PUBLIC_EXCHANGE_RATE_API_KEY;
 
