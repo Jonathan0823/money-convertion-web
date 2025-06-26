@@ -58,8 +58,14 @@ export default function Component() {
   useEffect(() => {
     if (exchangeRates[toCurrency] && amount) {
       const numAmount = Number.parseFloat(amount);
+      const formattedNum = (
+        numAmount * exchangeRates[toCurrency]
+      ).toLocaleString("id-ID", {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2,
+      });
       if (!isNaN(numAmount)) {
-        setConvertedAmount((numAmount * exchangeRates[toCurrency]).toFixed(2));
+        setConvertedAmount(formattedNum.replace(/,/g, "."));
       }
     }
   }, [amount, fromCurrency, toCurrency, exchangeRates]);
